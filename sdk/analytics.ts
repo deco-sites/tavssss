@@ -77,8 +77,8 @@ export const clickhouseScript = () => {
         event: mock,
       }),
     })
-
-    // first pageview
-    trackPageview()
   });
+
+  // first pageview
+  trackPageview()
 };
