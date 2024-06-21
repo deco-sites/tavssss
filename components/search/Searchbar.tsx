@@ -13,7 +13,7 @@ import ProductCard from "../../components/product/ProductCard.tsx";
 import Button from "../../components/ui/Button.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
-import { sendEvent } from "../../sdk/analytics.tsx";
+import { sendEvent } from "../../sdk/analytics.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSuggestions } from "../../sdk/useSuggestions.ts";
 import { useUI } from "../../sdk/useUI.ts";

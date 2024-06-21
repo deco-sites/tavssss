@@ -2,6 +2,8 @@ import { asset, Head } from "$fresh/runtime.ts";
 import { defineApp } from "$fresh/server.ts";
 import { Context } from "deco/deco.ts";
 import Theme from "../sections/Theme/Theme.tsx";
+import { useScript, useScriptAsDataURI } from "deco/hooks/useScript.ts";
+import { clickhouseScript } from "../sdk/analytics.ts";
 
 const sw = () =>
   addEventListener("load", () =>
@@ -34,9 +36,12 @@ export default defineApp(async (_req, ctx) => {
       {/* Rest of Preact tree */}
       <ctx.Component />
 
+      <script defer src={useScriptAsDataURI(clickhouseScript)}/>
+
       {/* Include service worker */}
       <script
         type="module"
+        defer
         dangerouslySetInnerHTML={{ __html: `(${sw})();` }}
       />
     </>

@@ -1,6 +1,6 @@
 import { AnalyticsItem } from "apps/commerce/types.ts";
 import Button from "../../../components/ui/Button.tsx";
-import { sendEvent } from "../../../sdk/analytics.tsx";
+import { sendEvent } from "../../../sdk/analytics.ts";
 import { formatPrice } from "../../../sdk/format.ts";
 import { useUI } from "../../../sdk/useUI.ts";
 import CartItem, { Item, Props as ItemProps } from "./CartItem.tsx";

@@ -1,7 +1,7 @@
 import { AnalyticsItem } from "apps/commerce/types.ts";
 import Button from "../../../../components/ui/Button.tsx";
 import Icon from "../../../../components/ui/Icon.tsx";
-import { sendEvent } from "../../../../sdk/analytics.tsx";
+import { sendEvent } from "../../../../sdk/analytics.ts";
 import { useUI } from "../../../../sdk/useUI.ts";
 
 interface Props {

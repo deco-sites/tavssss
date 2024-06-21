@@ -1,7 +1,7 @@
 import { AddToCartParams } from "apps/commerce/types.ts";
 import { useState } from "preact/hooks";
 import Button from "../../../components/ui/Button.tsx";
-import { sendEvent } from "../../../sdk/analytics.tsx";
+import { sendEvent } from "../../../sdk/analytics.ts";
 import { useUI } from "../../../sdk/useUI.ts";
 
 export interface Props {

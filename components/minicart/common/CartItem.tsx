@@ -4,7 +4,7 @@ import { useCallback, useState } from "preact/hooks";
 import Button from "../../../components/ui/Button.tsx";
 import Icon from "../../../components/ui/Icon.tsx";
 import QuantitySelector from "../../../components/ui/QuantitySelector.tsx";
-import { sendEvent } from "../../../sdk/analytics.tsx";
+import { sendEvent } from "../../../sdk/analytics.ts";
 import { formatPrice } from "../../../sdk/format.ts";
 
 export interface Item {
