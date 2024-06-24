@@ -2,7 +2,7 @@ import { asset, Head } from "$fresh/runtime.ts";
 import { defineApp } from "$fresh/server.ts";
 import { Context } from "deco/deco.ts";
 import Theme from "../sections/Theme/Theme.tsx";
-import { useScript, useScriptAsDataURI } from "deco/hooks/useScript.ts";
+import { useScriptAsDataURI } from "deco/hooks/useScript.ts";
 import { clickhouseScript } from "../sdk/analytics.ts";
 
 const sw = () =>
@@ -36,7 +36,13 @@ export default defineApp(async (_req, ctx) => {
       {/* Rest of Preact tree */}
       <ctx.Component />
 
-      <script defer src={useScriptAsDataURI(clickhouseScript)}/>
+      <script
+        defer
+        src={useScriptAsDataURI(clickhouseScript, {
+          siteId: ctx.state.global.site.id,
+          siteName: ctx.state.global.site.name,
+        })}
+      />
 
       {/* Include service worker */}
       <script
