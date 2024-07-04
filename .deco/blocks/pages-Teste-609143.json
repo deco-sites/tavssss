@@ -1,1 +1,20 @@
-{"name":"Teste","path":"/especial","sections":[{"__resolveType":"Benefits - 01"},{"__resolveType":"Campaign Timer - 01"}],"seo":{"__resolveType":"website/sections/Seo/SeoV2.tsx"},"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Teste",
+  "path": "/especial",
+  "sections": [
+    {
+      "__resolveType": "Benefits - 01"
+    },
+    {
+      "__resolveType": "Campaign Timer - 01"
+    },
+    {
+      "__resolveType": "site/sections/ItWorks.tsx",
+      "name": "<p>H1</p>"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
